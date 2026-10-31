@@ -4,249 +4,595 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Itália Sem Cidadania – O guia prático (Edição 2027)</title>
+<meta name="description" content="O guia em português para morar, estudar e trabalhar legalmente na Itália sem passaporte italiano. Atualizado com a nova lei da cidadania.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Itália Sem Cidadania – O guia prático (Edição 2027)">
-<meta property="og:description" content="Como morar, estudar e trabalhar legalmente na Itália sem passaporte italiano.">
+<meta property="og:description" content="A cidadania ficou fora de alcance. A Itália, não. Descubra o seu caminho legal.">
 <meta property="og:image" content="img/og-image.jpg">
 <meta name="theme-color" content="#0E2A20">
-<meta name="description" content="Guia prático para morar, estudar e trabalhar legalmente na Itália sem cidadania italiana. Edição 2027, por Fabio Dos Santos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#FFFFFF}
-a{color:#0B6E4F}a:hover{color:#08513A}
-summary{cursor:pointer}
+:root{
+  --deep:#0E2A20; --deep-2:#173D2F; --green:#0B6E4F; --mint:#EEF4F0; --mint-2:#DDEBE3;
+  --ink:#13201A; --muted:#4A5A52; --line:#D8E2DC; --paper:#FFFFFF;
+  --cta:#E2551B; --cta-d:#C2410C; --sun:#F6C445;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  --wrap:1180px; --r-s:10px; --r-m:18px; --r-l:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.025em;line-height:1.02}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font:700 17px/1 var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-cta{background:var(--cta);color:#fff}
+.btn-cta:hover{background:var(--cta-d)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+section{scroll-margin-top:72px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(14,42,32,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font:800 18px var(--display);text-decoration:none;letter-spacing:-.01em}
+.flag{display:flex;width:26px;height:18px;border-radius:4px;overflow:hidden}
+.flag i{flex:1}.flag i:nth-child(1){background:#169B62}.flag i:nth-child(2){background:#fff}.flag i:nth-child(3){background:#D7263D}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;opacity:.85}.nav-links a:hover{opacity:1}
+.nav .btn{min-height:42px;padding:0 20px;font-size:15px}
+@media (max-width:820px){.nav-links a:not(.btn){display:none}}
+
+/* hero */
+.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -1px -10%;height:120px;background:var(--paper);clip-path:ellipse(60% 100% at 50% 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:150px;position:relative;z-index:1}
+.hero h1{font-size:clamp(44px,6.4vw,86px);font-weight:800}
+.hero-sub{font-size:clamp(18px,1.7vw,21px);color:#CFE0D7;max-width:560px;margin:26px 0 34px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn-ghost{color:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14.5px;color:#B9D0C4}
+.trust span{display:flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;flex:none;color:var(--sun)}
+.stage{position:relative;height:560px;perspective:1400px}
+.route{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.route path{fill:none;stroke:#3E7A62;stroke-width:2;stroke-dasharray:6 9}
+.route .draw{stroke:var(--sun);stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.8s .5s cubic-bezier(.6,.1,.2,1) forwards}
+.pin{position:absolute;font:800 13px var(--body);letter-spacing:.04em;background:#fff;color:var(--deep);padding:7px 11px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.pin.br{left:0;bottom:60px}.pin.it{right:0;top:18px;background:var(--sun)}
+.book{position:absolute;left:50%;top:50%;width:min(360px,64%);transform:translate(-50%,-50%) rotateY(-18deg) rotateX(6deg);transform-style:preserve-3d;transition:transform .25s ease-out;animation:arrive 1.1s cubic-bezier(.2,.8,.2,1) both}
+.book img{border-radius:4px 12px 12px 4px;box-shadow:-2px 0 0 #0A1F17, 30px 40px 60px -20px rgba(0,0,0,.6), 0 10px 30px rgba(0,0,0,.35)}
+.book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:16px;border-radius:4px 0 0 4px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.12) 55%,transparent);z-index:2}
+.book .edge{position:absolute;right:-10px;top:6px;bottom:6px;width:12px;background:repeating-linear-gradient(90deg,#f4f4ef 0 1px,#dcdcd4 1px 2px);transform:rotateY(80deg);transform-origin:left;border-radius:0 3px 3px 0}
+.sticker{position:absolute;right:4%;bottom:70px;width:118px;height:118px;border-radius:50%;background:var(--cta);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font:800 15px/1.1 var(--display);transform:rotate(-12deg);box-shadow:0 14px 30px rgba(0,0,0,.3);animation:pop .6s 1.2s both}
+.sticker b{font-size:30px;display:block}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes arrive{from{opacity:0;transform:translate(-50%,-38%) rotateY(-40deg) rotateX(14deg)}}
+@keyframes pop{from{opacity:0;transform:rotate(-12deg) scale(.4)}}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:40px;padding-bottom:110px}
+  .stage{height:380px;margin:10px -10px 0}
+  .sticker{width:96px;height:96px;font-size:13px}.sticker b{font-size:24px}
+}
+
+/* law timeline */
+.law{padding:70px 0 40px}
+.law h2{font-size:clamp(32px,4vw,52px);max-width:760px}
+.law-lead{color:var(--muted);max-width:640px;margin-top:16px;font-size:18px}
+.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:44px;border-top:2px solid var(--deep)}
+.tl{padding:22px 24px 0 0;position:relative}
+.tl::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--deep)}
+.tl:last-child::before{background:var(--cta);border-color:var(--cta)}
+.tl time{font:800 26px var(--display);display:block;margin-bottom:8px}
+.tl p{color:var(--muted);font-size:16px}
+.tl small{display:block;margin-top:8px;font-size:13px;color:#7A8A82}
+@media (max-width:760px){.timeline{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--deep);margin-left:6px}.tl{padding:0 0 30px 26px}.tl::before{top:4px;left:-8px}}
+
+/* quiz (signature) */
+.finder{padding:70px 0 90px}
+.finder-box{background:var(--mint);border-radius:var(--r-l);padding:clamp(26px,4vw,56px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,4vw,56px);align-items:start}
+.finder h2{font-size:clamp(32px,4vw,52px)}
+.finder-intro p{color:var(--muted);margin-top:16px;font-size:18px;max-width:420px}
+.progress{display:flex;gap:6px;margin-top:28px}
+.progress i{height:6px;flex:1;border-radius:6px;background:var(--mint-2);transition:background .3s}
+.progress i.on{background:var(--green)}
+.q-card{background:#fff;border-radius:var(--r-m);padding:28px;box-shadow:0 1px 0 var(--line)}
+.q-step{font-size:14px;color:var(--muted);font-weight:600}
+.q-text{font:700 clamp(22px,2.4vw,28px)/1.2 var(--display);margin:10px 0 22px;letter-spacing:-.015em}
+.q-hint{font-size:14px;color:var(--muted);margin:-10px 0 20px}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.q-opts button{min-height:58px;border-radius:14px;border:2px solid var(--line);background:#fff;font:700 17px var(--body);color:var(--ink);cursor:pointer;transition:border-color .15s, background .15s}
+.q-opts button:hover{border-color:var(--green);background:var(--mint)}
+.q-back{margin-top:16px;background:none;border:0;color:var(--muted);font:600 14px var(--body);cursor:pointer;padding:6px 0;text-decoration:underline}
+.q-anim{animation:qin .35s ease both}
+@keyframes qin{from{opacity:0;transform:translateX(18px)}}
+/* boarding pass */
+.pass{display:none;background:#fff;border-radius:var(--r-m);overflow:hidden;box-shadow:0 30px 60px -30px rgba(14,42,32,.5)}
+.pass.show{display:block;animation:passin .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes passin{from{opacity:0;transform:translateY(24px) rotate(-1.5deg)}}
+.pass-top{background:var(--deep);color:#fff;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pass-top .codes{display:flex;align-items:center;gap:12px;font:800 30px var(--display);letter-spacing:.02em}
+.pass-top .codes svg{width:30px;color:var(--sun)}
+.pass-top small{display:block;font:500 12px var(--body);color:#9CC4B2;letter-spacing:0}
+.pass-body{padding:24px}
+.pass-label{font-size:14px;color:var(--muted);font-weight:600}
+.pass-title{font:800 clamp(26px,3vw,34px)/1.05 var(--display);margin:4px 0 12px;letter-spacing:-.02em}
+.pass-desc{color:var(--muted)}
+.pass-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0 0}
+.pass-grid div{background:var(--mint);border-radius:12px;padding:12px 14px}
+.pass-grid span{display:block;font-size:12.5px;color:var(--muted);font-weight:600}
+.pass-grid b{font:700 15.5px/1.3 var(--body);overflow-wrap:anywhere}
+.pass-tear{position:relative;border-top:2px dashed var(--line);margin:0 18px}
+.pass-tear::before,.pass-tear::after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--mint)}
+.pass-tear::before{left:-30px}.pass-tear::after{right:-30px}
+.pass-foot{padding:20px 24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.pass-foot p{font-size:14px;color:var(--muted);max-width:280px}
+@media (max-width:900px){.finder-box{grid-template-columns:1fr}.q-opts{grid-template-columns:1fr}}
+
+/* pages gallery */
+.peek{background:var(--deep);color:#fff;padding:80px 0 70px;overflow:hidden}
+.peek-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.peek h2{font-size:clamp(32px,4vw,52px);max-width:640px}
+.peek-head p{color:#B9D0C4;max-width:380px}
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:40px 22px 26px;margin:0 -22px;scrollbar-width:thin;scrollbar-color:#3E7A62 transparent}
+.rail figure{flex:0 0 min(300px,74vw);margin:0;scroll-snap-align:center}
+.rail img{border-radius:10px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7);background:#fff;aspect-ratio:148/210;object-fit:cover}
+.rail figcaption{margin-top:14px;font-size:15px;color:#CFE0D7}
+.rail figcaption b{color:#fff;display:block;font-weight:700}
+.rail-ctrl{display:flex;gap:10px}
+.rail-ctrl button{width:48px;height:48px;border-radius:50%;border:2px solid #3E7A62;background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.rail-ctrl button:hover{background:var(--deep-2)}
+.rail-ctrl svg{width:20px}
+
+/* contents */
+.inside{padding:90px 0 40px}
+.inside-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.inside h2{font-size:clamp(32px,4vw,52px);position:sticky;top:100px}
+.inside .side p{color:var(--muted);margin-top:16px;font-size:18px;position:sticky;top:200px}
+.chapters{list-style:none;margin:0;padding:0;counter-reset:c}
+.chapters li{display:grid;grid-template-columns:56px 1fr;gap:4px 14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.chapters li::before{counter-increment:c;content:counter(c,decimal-leading-zero);font:800 22px var(--display);color:var(--green);grid-row:span 2}
+.chapters b{font-weight:700;font-size:18px}
+.chapters span{color:var(--muted);font-size:15.5px}
+.chapters li.new b::after{content:"novo";margin-left:10px;font:700 12px var(--body);background:var(--sun);color:var(--deep);padding:2px 9px;border-radius:999px;vertical-align:3px}
+@media (max-width:860px){.inside-grid{grid-template-columns:1fr;gap:20px}.inside h2,.inside .side p{position:static}}
+
+/* bonus */
+.bonus{padding:70px 0}
+.bonus-box{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.bonus-img{border-radius:var(--r-l);overflow:hidden;background:var(--mint)}
+.bonus h2{font-size:clamp(32px,4vw,48px)}
+.bonus-lead{color:var(--muted);margin:16px 0 26px;font-size:18px}
+.blist{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.blist li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.bicon{width:44px;height:44px;border-radius:12px;background:var(--mint);color:var(--green);display:flex;align-items:center;justify-content:center}
+.bicon svg{width:22px;height:22px}
+.blist b{display:block;font-size:17px}
+.blist span{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.bonus-box{grid-template-columns:1fr}}
+
+/* author */
+.author{padding:40px 0 90px}
+.author-box{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:var(--r-l);overflow:hidden;background:var(--deep);color:#fff}
+.author-photo{position:relative;min-height:440px}
+.author-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:contrast(1.05)}
+.author-text{padding:clamp(28px,5vw,64px)}
+.author-text h2{font-size:clamp(30px,3.6vw,46px)}
+.author-text p{color:#CFE0D7;margin-top:18px;font-size:17.5px;max-width:560px}
+.facts{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.facts div{border:1.5px solid #3E7A62;border-radius:14px;padding:12px 16px}
+.facts b{display:block;font:800 26px var(--display)}
+.facts span{font-size:13.5px;color:#B9D0C4}
+@media (max-width:860px){.author-box{grid-template-columns:1fr}.author-photo{min-height:360px}}
+
+/* pricing */
+.pricing{padding:90px 0;background:var(--mint)}
+.pricing-head{text-align:center;max-width:700px;margin:0 auto}
+.pricing h2{font-size:clamp(34px,4.4vw,56px)}
+.pricing-head p{color:var(--muted);margin-top:14px;font-size:18px}
+.plans{display:grid;grid-template-columns:1fr 1.12fr;gap:22px;max-width:900px;margin:46px auto 0;align-items:stretch}
+.plan{background:#fff;border-radius:var(--r-l);padding:34px;display:flex;flex-direction:column}
+.plan h3{font-size:26px}
+.plan .for{color:var(--muted);font-size:15.5px;margin-top:6px}
+.price{font:800 60px/1 var(--display);margin:24px 0 4px;letter-spacing:-.03em}
+.price small{font:600 22px var(--body);vertical-align:22px;margin-right:4px}
+.price-note{font-size:14px;color:var(--muted)}
+.plan ul{list-style:none;padding:0;margin:24px 0 30px;display:grid;gap:12px;flex:1}
+.plan li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:16px}
+.plan li svg{width:22px;height:22px;color:var(--green);margin-top:1px}
+.plan li.off{color:#98A79F}.plan li.off svg{color:#C3CEC8}
+.plan .btn{width:100%}
+.plan.best{background:var(--deep);color:#fff;position:relative;box-shadow:0 40px 70px -40px rgba(14,42,32,.8)}
+.plan.best .for,.plan.best .price-note{color:#B9D0C4}
+.plan.best li svg{color:var(--sun)}
+.ribbon{position:absolute;top:-14px;right:28px;background:var(--sun);color:var(--deep);font:800 14px var(--body);padding:7px 14px;border-radius:999px}
+.guarantee{display:flex;gap:18px;align-items:center;max-width:720px;margin:36px auto 0;background:#fff;border-radius:var(--r-m);padding:20px 24px}
+.seal{flex:none;width:64px;height:64px;border-radius:50%;border:3px dashed var(--green);display:flex;align-items:center;justify-content:center;font:800 24px var(--display);color:var(--green)}
+.guarantee b{display:block;font-size:17px}
+.guarantee span{color:var(--muted);font-size:15.5px}
+.pay{display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--muted)}
+@media (max-width:760px){.plans{grid-template-columns:1fr}.plan.best{order:-1}}
+
+/* faq */
+.faq{padding:90px 0}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.faq h2{font-size:clamp(32px,4vw,52px)}
+.faq-side p{color:var(--muted);margin-top:16px}
+.faq-side a{color:var(--green);font-weight:600}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font:700 19px/1.35 var(--body);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:28px;width:14px;height:14px;border-right:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(45deg);transition:transform .25s}
+details[open] summary::after{transform:rotate(-135deg);top:34px}
+details p{color:var(--muted);padding:0 0 22px;max-width:640px}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:20px}}
+
+/* final */
+.final{background:var(--deep);color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(38px,5.6vw,76px);max-width:900px;margin:0 auto}
+.final p{color:#CFE0D7;margin:22px auto 34px;max-width:560px;font-size:19px}
+.final .route-mini{display:flex;justify-content:center;align-items:center;gap:14px;font:800 15px var(--body);color:#9CC4B2;margin-bottom:26px}
+.final .route-mini i{width:90px;border-top:2px dashed #3E7A62}
+footer{background:#0A1F17;color:#9CB3A8;font-size:14px;padding:34px 0 110px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer p{max-width:640px}
+footer a{color:#fff}
+
+/* sticky mobile bar */
+.buybar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;background:var(--deep);color:#fff;border-radius:18px;padding:10px 10px 10px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 20px 40px rgba(0,0,0,.35);transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.buybar.show{transform:none}
+.buybar b{display:block;font-size:15px}.buybar span{font-size:13px;color:#B9D0C4}
+.buybar .btn{min-height:48px;padding:0 20px;font-size:16px}
+@media (min-width:901px){.buybar{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .route .draw{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
 </style>
-<style>html{scroll-behavior:smooth} img{max-width:100%}</style>
 </head>
 <body>
-<div style="font-family: 'Inter', system-ui, sans-serif; color: #13201A; background: #FFFFFF; line-height: 1.55; font-size: 17px">
 
-<!-- TOP BAR -->
-<header style="border-bottom: 1px solid #E3E9E5; background: #FFFFFF">
-<div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px">
-<div aria-hidden="true" style="display: flex; height: 22px; width: 33px; border-radius: 4px; overflow: hidden">
-<div style="flex: 1; background: #0B6E4F"></div><div style="flex: 1; background: #F4F4F0"></div><div style="flex: 1; background: #C8102E"></div>
-</div>
-<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.01em">Itália Sem Cidadania</span>
-</div>
-<a href="#precos" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #C2410C; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Quero o guia</a>
-</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Itália Sem Cidadania, início"><span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>Itália Sem Cidadania</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#caminho">Seu caminho</a>
+      <a href="#por-dentro">Por dentro</a>
+      <a href="#autor">Autor</a>
+      <a class="btn btn-cta" href="#precos">Ver preços</a>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO -->
-<section style="background: #F3F6F4">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
-<span style="align-self: flex-start; padding: 6px 14px; border-radius: 999px; background: #DDEBE3; color: #08513A; font-weight: 600; font-size: 14px">Edição 2027 · atualizado com a nova lei da cidadania</span>
-<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 5.2vw, 62px); line-height: 1.04; letter-spacing: -0.025em">Seu sobrenome não garante mais o passaporte. Mas a Itália continua possível.</h1>
-<p style="margin: 0; font-size: clamp(18px, 1.6vw, 21px); color: #3D4D45; max-width: 600px">O guia prático, em português do Brasil, para morar e trabalhar <strong style="color: #13201A">legalmente</strong> na Itália sem cidadania: dos documentos no Brasil aos seus primeiros 90 dias aqui.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
-<a href="#precos" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; background: #C2410C; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none">Quero meu plano para a Itália</a>
-<a href="#conteudo" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 999px; border: 2px solid #13201A; color: #13201A; font-weight: 600; font-size: 17px; text-decoration: none">Ver o que tem dentro</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 22px; color: #3D4D45; font-size: 15px">
-<span>✓ Pix ou cartão parcelado</span><span>✓ Acesso imediato por e-mail</span><span>✓ Garantia de 7 dias</span>
-</div>
-</div>
-<div style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #DCE4DF; border-radius: 20px; padding: 28px; box-shadow: 0 24px 48px -28px rgba(19,32,26,0.35); display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B6E4F">O kit completo</span>
-<div style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #DDEBE3; color: #08513A; font-weight: 800; display: flex; align-items: center; justify-content: center">14</span><div><div style="font-weight: 700">Capítulos práticos</div><div style="font-size: 15px; color: #4A5A52">Do visto ao primeiro salário</div></div></div>
-<div style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #DDEBE3; color: #08513A; font-weight: 800; display: flex; align-items: center; justify-content: center">7</span><div><div style="font-weight: 700">Bônus prontos para usar</div><div style="font-size: 15px; color: #4A5A52">Planilha, checklists, modelos de CV</div></div></div>
-<div style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #DDEBE3; color: #08513A; font-weight: 800; display: flex; align-items: center; justify-content: center">12m</span><div><div style="font-weight: 700">Atualizações incluídas</div><div style="font-size: 15px; color: #4A5A52">Mudou a regra? Você recebe a nova versão</div></div></div>
-<div style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #DDEBE3; color: #08513A; font-weight: 800; display: flex; align-items: center; justify-content: center">90</span><div><div style="font-weight: 700">Calendário de 90 dias</div><div style="font-size: 15px; color: #4A5A52">O que fazer em cada semana após chegar</div></div></div>
-</div>
-</div>
+<main id="topo">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>A cidadania ficou fora de alcance. A Itália, não.</h1>
+      <p class="hero-sub">O guia em português para morar, estudar e trabalhar legalmente na Itália sem passaporte italiano, atualizado com a lei da cidadania de 2025 e as regras de 2026.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-cta" href="#precos">Quero o guia</a>
+        <a class="btn btn-ghost" href="#caminho">Descobrir meu caminho</a>
+      </div>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Pix ou cartão parcelado</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Download na hora</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>7 dias de garantia</span>
+      </div>
+    </div>
+    <div class="stage" id="stage" aria-hidden="true">
+      <svg class="route" viewBox="0 0 500 560" preserveAspectRatio="none"><path d="M30 480 C 120 380, 60 220, 220 180 S 420 120, 470 40"/><path class="draw" d="M30 480 C 120 380, 60 220, 220 180 S 420 120, 470 40"/></svg>
+      <span class="pin br">BRASIL</span><span class="pin it">ITÁLIA</span>
+      <div class="book" id="book"><img src="img/capa.jpg" alt="" width="700" height="993"><span class="edge"></span></div>
+      <div class="sticker"><span><b>2027</b>edição atualizada</span></div>
+    </div>
+  </div>
 </section>
 
-<!-- PROBLEMA -->
-<section>
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="max-width: 720px; display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">A regra mudou. E muita gente ficou sem plano.</h2>
-<p style="margin: 0; font-size: 19px; color: #3D4D45">Milhões de brasileiros têm origem italiana. Durante anos, o caminho parecia simples: juntar documentos e pedir a cidadania. Isso acabou para a maioria.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
-<div style="border: 1px solid #E3E9E5; border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; color: #C8102E">01</span><h3 style="margin: 0; font-size: 19px">Só filhos e netos</h3><p style="margin: 0; color: #4A5A52">Hoje o reconhecimento por descendência ficou restrito a filhos e netos de italianos que nunca tiveram outra cidadania.</p></div>
-<div style="border: 1px solid #E3E9E5; border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; color: #C8102E">02</span><h3 style="margin: 0; font-size: 19px">Consulados com vagas limitadas</h3><p style="margin: 0; color: #4A5A52">Até 2028 os consulados aceitam poucos pedidos, e a partir de 2029 tudo passa para um escritório central em Roma.</p></div>
-<div style="border: 1px solid #E3E9E5; border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; color: #C8102E">03</span><h3 style="margin: 0; font-size: 19px">Informação velha na internet</h3><p style="margin: 0; color: #4A5A52">Vídeos e grupos repetem regras que já mudaram. Um erro no documento pode custar meses e milhares de reais.</p></div>
-</div>
-</div>
+<section class="law" aria-labelledby="law-t">
+  <div class="wrap">
+    <h2 id="law-t">O que mudou, e por que tanta gente ficou sem plano</h2>
+    <p class="law-lead">Milhões de brasileiros têm origem italiana. Para a maioria, o caminho do passaporte acabou. Isto é o que diz a lei hoje:</p>
+    <div class="timeline">
+      <div class="tl"><time>Mar 2025</time><p>A cidadania por descendência passa a valer só para filhos e netos de italianos que nunca tiveram outra cidadania.</p><small>Decreto-Lei 36/2025, Lei 74/2025</small></div>
+      <div class="tl"><time>2026</time><p>A Corte Constitucional confirma as novas regras. As restrições continuam válidas.</p><small>Sentença 63/2026</small></div>
+      <div class="tl"><time>Jan 2029</time><p>Os pedidos de adultos que vivem no exterior passam para um escritório central em Roma. Até lá, os consulados aceitam poucos pedidos.</p><small>Lei 11/2026</small></div>
+    </div>
+  </div>
 </section>
 
-<!-- CAMINHOS -->
-<section style="background: #0E2A20; color: #FFFFFF">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="max-width: 760px; display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Existem caminhos legais. Você só precisa do mapa certo.</h2>
-<p style="margin: 0; font-size: 19px; color: #C9DAD1">Sem cidadania, a Itália continua aberta para quem entra pela porta certa. O guia explica cada caminho, para quem ele serve e por onde começar.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
-<div style="background: #163A2D; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Trabalho</h3><p style="margin: 0; font-size: 15px; color: #C9DAD1">Contrato com empresa italiana, cotas do decreto flussi</p></div>
-<div style="background: #163A2D; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Profissional qualificado</h3><p style="margin: 0; font-size: 15px; color: #C9DAD1">Blue Card para quem tem formação superior</p></div>
-<div style="background: #163A2D; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Estudo</h3><p style="margin: 0; font-size: 15px; color: #C9DAD1">Universidade, mestrado e cursos reconhecidos</p></div>
-<div style="background: #163A2D; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Trabalho remoto</h3><p style="margin: 0; font-size: 15px; color: #C9DAD1">Nômade digital e trabalho autônomo</p></div>
-<div style="background: #163A2D; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Família</h3><p style="margin: 0; font-size: 15px; color: #C9DAD1">Reagrupamento familiar, casamento e união civil</p></div>
-</div>
-</div>
+<section class="finder" id="caminho" aria-labelledby="finder-t">
+  <div class="wrap">
+    <div class="finder-box">
+      <div class="finder-intro">
+        <h2 id="finder-t">Qual é o seu caminho para a Itália?</h2>
+        <p>Responda 4 perguntas rápidas e veja qual visto combina com você. O guia explica cada caminho, passo a passo.</p>
+        <div class="progress" id="progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div aria-live="polite">
+        <div class="q-card" id="qcard">
+          <p class="q-step" id="qstep">Pergunta 1 de 4</p>
+          <p class="q-text" id="qtext"></p>
+          <p class="q-hint" id="qhint"></p>
+          <div class="q-opts"><button type="button" data-a="sim">Sim</button><button type="button" data-a="nao">Não</button></div>
+          <button type="button" class="q-back" id="qback" hidden>Voltar</button>
+        </div>
+        <div class="pass" id="pass">
+          <div class="pass-top">
+            <div class="codes"><span>BR<small>Brasil</small></span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg><span>IT<small>Itália</small></span></div>
+            <span style="font:700 13px var(--body);color:var(--sun)">Seu resultado</span>
+          </div>
+          <div class="pass-body">
+            <p class="pass-label">Caminho recomendado</p>
+            <p class="pass-title" id="ptitle"></p>
+            <p class="pass-desc" id="pdesc"></p>
+            <div class="pass-grid">
+              <div><span>Exigência principal</span><b id="preq"></b></div>
+              <div><span>No guia</span><b id="pchap"></b></div>
+            </div>
+          </div>
+          <div class="pass-tear" aria-hidden="true"></div>
+          <div class="pass-foot">
+            <p>O guia traz os documentos, prazos e erros a evitar para este caminho.</p>
+            <a class="btn btn-cta" href="#precos">Quero o meu plano</a>
+          </div>
+          <div style="padding:0 24px 20px"><button type="button" class="q-back" id="qrestart">Refazer o teste</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CONTEÚDO -->
-<section id="conteudo">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="max-width: 720px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B6E4F">O que tem dentro</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">14 capítulos, na ordem em que você vai precisar deles.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px">
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">01</span><div><div style="font-weight: 700">A nova realidade</div><div style="font-size: 15px; color: #4A5A52">O que mudou e o que fazer se você não tem mais direito</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">02</span><div><div style="font-weight: 700">Mapa dos caminhos legais</div><div style="font-size: 15px; color: #4A5A52">Trabalho, estudo, remoto, família: prós e contras de cada um</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">03</span><div><div style="font-weight: 700">Qual é o seu caminho?</div><div style="font-size: 15px; color: #4A5A52">Teste por idade, profissão, orçamento e família</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">04</span><div><div style="font-weight: 700">Estudar na Itália e conseguir bolsa</div><div style="font-size: 15px; color: #4A5A52">Universitaly, bolsas regionais, trabalho de 20 h e o que fazer depois do diploma</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">05</span><div><div style="font-weight: 700">Três caminhos na prática</div><div style="font-size: 15px; color: #4A5A52">Estudo, nômade digital e decreto flussi, mês a mês</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">06</span><div><div style="font-weight: 700">Preparação no Brasil</div><div style="font-size: 15px; color: #4A5A52">Apostila, tradução juramentada, diploma e CNH</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">07</span><div><div style="font-weight: 700">Visto e entrada</div><div style="font-size: 15px; color: #4A5A52">Consulado, prazos e erros que levam à recusa</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">08</span><div><div style="font-weight: 700">Os primeiros 30 dias</div><div style="font-size: 15px; color: #4A5A52">Codice fiscale, permesso di soggiorno, residência, banco</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">09</span><div><div style="font-weight: 700">Trabalho</div><div style="font-size: 15px; color: #4A5A52">Onde procurar, currículo italiano, salários e contracheque</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">10</span><div><div style="font-weight: 700">Moradia</div><div style="font-size: 15px; color: #4A5A52">Contratos de aluguel, caução e golpes comuns</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">11</span><div><div style="font-weight: 700">8 cidades comparadas</div><div style="font-size: 15px; color: #4A5A52">Custo de vida, emprego, clima e comunidade brasileira</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">12</span><div><div style="font-weight: 700">Saúde, escola e família</div><div style="font-size: 15px; color: #4A5A52">Sistema de saúde, médico de família, matrícula dos filhos</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">13</span><div><div style="font-weight: 700">Dinheiro e impostos</div><div style="font-size: 15px; color: #4A5A52">Enviar dinheiro do Brasil, impostos na Itália e no Brasil</div></div></div>
-<div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E3E9E5"><span style="flex: none; width: 34px; font-weight: 800; color: #0B6E4F">14</span><div><div style="font-weight: 700">Vida real na Itália</div><div style="font-size: 15px; color: #4A5A52">Cultura, burocracia e os erros mais comuns dos brasileiros</div></div></div>
-</div>
-</div>
+<section class="peek" id="por-dentro" aria-labelledby="peek-t">
+  <div class="wrap">
+    <div class="peek-head">
+      <h2 id="peek-t">Folheie antes de comprar</h2>
+      <p>Páginas reais do guia: 52 páginas com tabelas, checklists e exemplos mês a mês.</p>
+      <div class="rail-ctrl"><button type="button" id="prev" aria-label="Páginas anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></button><button type="button" id="next" aria-label="Próximas páginas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="rail" id="rail" tabindex="0" aria-label="Páginas do guia">
+      <figure><img src="img/pages/mapa.jpg" alt="Página do mapa dos caminhos legais, com tabela comparativa dos vistos" loading="lazy" width="642" height="910"><figcaption><b>Todos os vistos lado a lado</b>Exigências e cotas de cada caminho</figcaption></figure>
+      <figure><img src="img/pages/teste.jpg" alt="Página do teste Qual é o seu caminho" loading="lazy" width="642" height="910"><figcaption><b>O teste completo</b>7 perguntas para escolher o seu visto</figcaption></figure>
+      <figure><img src="img/pages/estudo.jpg" alt="Abertura do capítulo sobre estudar na Itália e conseguir bolsa" loading="lazy" width="642" height="910"><figcaption><b>Estudo e bolsas</b>Como estudar quase de graça</figcaption></figure>
+      <figure><img src="img/pages/lucas.jpg" alt="Página com a linha do tempo de um exemplo de estudante" loading="lazy" width="642" height="910"><figcaption><b>Caminhos mês a mês</b>3 exemplos completos, do Brasil à Itália</figcaption></figure>
+      <figure><img src="img/pages/30-dias.jpg" alt="Página sobre os primeiros 30 dias na Itália" loading="lazy" width="642" height="910"><figcaption><b>Os primeiros 30 dias</b>Permesso, codice fiscale, residência</figcaption></figure>
+      <figure><img src="img/pages/cidades.jpg" alt="Página com cidades italianas comparadas e aluguel médio" loading="lazy" width="642" height="910"><figcaption><b>Cidades comparadas</b>Aluguel, empregos e prós e contras</figcaption></figure>
+    </div>
+  </div>
 </section>
 
-<!-- BÔNUS -->
-<section style="background: #F3F6F4">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="max-width: 720px; display: flex; flex-direction: column; gap: 14px">
-<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B6E4F">Bônus do kit completo</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Ferramentas prontas para você não começar do zero.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px">
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Planilha do orçamento</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Calcule quanto você precisa para se mudar e viver os primeiros 6 meses.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Checklists por visto</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Todos os documentos de cada caminho, para imprimir e ticar.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Modelos prontos</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Currículo italiano, carta de apresentação e e-mails para aluguel.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Italiano de sobrevivência</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Frases para repartições, médico, banco e entrevista.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Mapa de sites oficiais</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Os links certos de ministérios, questure e órgãos públicos.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Calendário de 90 dias</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">O que fazer em cada semana depois de chegar.</p></div>
-<div style="background: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 18px">Rede brasileira na Itália</h3><p style="margin: 0; font-size: 15px; color: #4A5A52">Embaixada, consulados e como encontrar brasileiros na sua cidade.</p></div>
-</div>
-</div>
+<section class="inside" aria-labelledby="inside-t">
+  <div class="wrap inside-grid">
+    <div class="side">
+      <h2 id="inside-t">14 capítulos, na ordem da sua mudança</h2>
+      <p>Da decisão no Brasil aos primeiros meses na Itália. Cada regra traz a fonte oficial para você conferir.</p>
+    </div>
+    <ol class="chapters">
+      <li><b>A nova realidade da cidadania</b><span>O que mudou e quem ainda tem direito</span></li>
+      <li><b>Mapa dos caminhos legais</b><span>Trabalho, estudo, nômade digital, renda e família</span></li>
+      <li><b>Qual é o seu caminho?</b><span>Teste para escolher o visto certo</span></li>
+      <li class="new"><b>Estudar na Itália e conseguir bolsa</b><span>Universitaly, bolsas regionais e trabalho de 20 horas</span></li>
+      <li class="new"><b>Três caminhos na prática</b><span>Estudo, nômade digital e decreto flussi, mês a mês</span></li>
+      <li><b>Preparação no Brasil</b><span>Apostila, traduções, diploma e CNH</span></li>
+      <li><b>Visto e entrada</b><span>Consulado, prazos e erros que levam à recusa</span></li>
+      <li><b>Os primeiros 30 dias</b><span>Permesso di soggiorno, codice fiscale, residência, banco</span></li>
+      <li><b>Trabalho na Itália</b><span>Onde procurar, currículo e salário explicado</span></li>
+      <li><b>Moradia</b><span>Contratos, caução e golpes comuns</span></li>
+      <li><b>Cidades comparadas</b><span>8 cidades com aluguel médio</span></li>
+      <li><b>Saúde, escola e família</b><span>Serviço de saúde, médico e matrícula dos filhos</span></li>
+      <li><b>Dinheiro e impostos</b><span>Saída definitiva, IRPEF e dupla tributação</span></li>
+      <li><b>Vida real na Itália</b><span>Cultura, burocracia e os erros mais comuns</span></li>
+    </ol>
+  </div>
 </section>
 
-<!-- PARA QUEM -->
-<section>
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-wrap: wrap; gap: 24px">
-<div style="flex: 1 1 380px; min-width: 0; border: 2px solid #0B6E4F; border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px">É para você se…</h2>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; color: #3D4D45">
-<li>Sonha em morar na Itália, mas não tem direito à cidadania</li>
-<li>Está cansado de informação desencontrada no YouTube e nos grupos</li>
-<li>Quer um plano passo a passo, em português do Brasil</li>
-<li>Prefere se preparar bem antes de gastar com mudança</li>
-</ul>
-</div>
-<div style="flex: 1 1 380px; min-width: 0; border: 1px solid #E3E9E5; border-radius: 18px; padding: 30px; display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px">Não é para você se…</h2>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; color: #3D4D45">
-<li>Procura um atalho ilegal ou "jeitinho" para ficar na Itália</li>
-<li>Precisa de um advogado para um processo de cidadania</li>
-<li>Quer que alguém faça toda a burocracia por você</li>
-</ul>
-</div>
-</div>
+<section class="bonus" aria-labelledby="bonus-t">
+  <div class="wrap bonus-box">
+    <div class="bonus-img"><img src="img/kit.jpg" alt="O e-book e o Kit de Bônus com a planilha e os modelos de documentos" loading="lazy" width="900" height="900"></div>
+    <div>
+      <h2 id="bonus-t">No Kit completo, 7 ferramentas prontas para usar</h2>
+      <p class="bonus-lead">O guia diz o que fazer. Os bônus fazem você ganhar tempo.</p>
+      <ul class="blist">
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></span><div><b>Planilha do orçamento</b><span>Quanto você precisa juntar, em reais e em euros</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span><div><b>Checklists por visto</b><span>Todos os documentos, para imprimir e marcar</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><div><b>Modelos de CV e cartas</b><span>Currículo italiano, carta e e-mails em italiano</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><b>Italiano de sobrevivência</b><span>Frases para Questura, banco, médico e entrevista</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><b>Mapa dos sites oficiais</b><span>Os 19 endereços que você vai usar</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><div><b>Calendário dos 90 dias</b><span>O que fazer em cada semana depois de chegar</span></div></li>
+        <li><span class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2A5 5 0 0 1 21.5 19"/></svg></span><div><b>Rede brasileira na Itália</b><span>Consulados e como encontrar brasileiros com segurança</span></div></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- AUTOR -->
-<section style="background: #F3F6F4">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
-<img src="img/fabio_portrait.jpg" alt="Fabio Dos Santos, autor do guia" style="flex: 0 1 300px; aspect-ratio: 4 / 5; min-width: 220px; width: 300px; border-radius: 20px; object-fit: cover; object-position: 50% 20%; display: block">
-<div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0B6E4F">Quem escreveu</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1">Do chão de fábrica ao código, em Bolonha.</h2>
-<p style="margin: 0; font-size: 18px; color: #3D4D45">Oi, eu sou o <strong style="color: #13201A">Fabio Dos Santos</strong>. Moro em Bolonha há 26 anos. Trabalhei 12 anos como operário numa fábrica de embalagens, juntei dinheiro, comprei uma casa no Brasil e estudei para mudar de profissão. Hoje sou desenvolvedor de software.</p>
-<p style="margin: 0; font-size: 18px; color: #3D4D45">Tenho cidadania italiana, então o meu caminho foi diferente do seu. Mas conheço por dentro a vida real de quem constrói a vida aqui: o trabalho pesado, o aluguel, a burocracia e o esforço de estudar para crescer.</p>
-<p style="margin: 0; font-size: 18px; color: #3D4D45">Cada informação deste guia foi conferida em fontes oficiais italianas e traz a data da última atualização. Sem promessas mágicas: só o que funciona de verdade.</p>
-</div>
-</div>
+<section class="author" id="autor" aria-labelledby="autor-t">
+  <div class="wrap">
+    <div class="author-box">
+      <div class="author-photo"><img src="img/fabio_portrait.jpg" alt="Fabio Dos Santos, autor do guia" loading="lazy" width="800" height="1000"></div>
+      <div class="author-text">
+        <h2 id="autor-t">Do chão de fábrica ao código, em Bolonha</h2>
+        <p>Eu sou o Fabio Dos Santos. Moro em Bolonha há 26 anos. Trabalhei 12 anos como operário numa fábrica de embalagens, juntei dinheiro, comprei uma casa no Brasil e estudei para mudar de profissão. Hoje sou desenvolvedor de software.</p>
+        <p>Tenho cidadania italiana, então o meu caminho foi diferente do seu. Mas conheço por dentro a vida real de quem constrói a vida aqui. Escrevi este guia porque a nova lei mudou tudo, e quase tudo o que circula na internet ficou desatualizado.</p>
+        <div class="facts">
+          <div><b>26 anos</b><span>vivendo na Itália</span></div>
+          <div><b>12 anos</b><span>de fábrica antes da TI</span></div>
+          <div><b>52</b><span>páginas de guia prático</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- PREÇOS -->
-<section id="precos">
-<div style="max-width: 1120px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 40px">
-<div style="max-width: 720px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Escolha como você quer começar.</h2>
-<p style="margin: 0; font-size: 18px; color: #3D4D45">Pagamento único. Pix com liberação imediata ou cartão parcelado.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: stretch; width: 100%; max-width: 820px; margin: 0 auto">
-
-<div style="border: 1px solid #E3E9E5; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 18px">
-<h3 style="margin: 0; font-size: 20px">Guia</h3>
-<div><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 46px">R$87</span></div>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #3D4D45; flex: 1">
-<li>E-book com os 14 capítulos</li>
-<li>Edição 2027</li>
-</ul>
-<a href="https://buy.stripe.com/cNieVd0ouart4dJ5Rsew806" style="display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; border: 2px solid #13201A; color: #13201A; font-weight: 700; text-decoration: none">Quero o guia</a>
-</div>
-
-<div style="border: 2px solid #C2410C; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 48px -28px rgba(19,32,26,0.4)">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap"><h3 style="margin: 0; font-size: 20px">Kit completo</h3><span style="padding: 4px 12px; border-radius: 999px; background: #C2410C; color: #FFFFFF; font-size: 13px; font-weight: 700">Recomendado</span></div>
-<div><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 46px">R$137</span></div>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #3D4D45; flex: 1">
-<li>E-book com os 14 capítulos</li>
-<li>Os 7 bônus</li>
-<li>Atualizações gratuitas por 12 meses</li>
-</ul>
-<a href="https://buy.stripe.com/6oU00j8V06bd11xenYew807" style="display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; background: #C2410C; color: #FFFFFF; font-weight: 700; text-decoration: none">Quero o kit completo</a>
-</div>
-
-</div>
-<div style="max-width: 760px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: #F3F6F4; border-radius: 18px; padding: 24px 28px">
-<div aria-hidden="true" style="flex: none; width: 56px; height: 56px; border-radius: 50%; background: #0B6E4F; color: #FFFFFF; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center">7</div>
-<div style="flex: 1 1 300px; min-width: 0"><div style="font-weight: 700; font-size: 18px">Garantia de 7 dias</div><div style="color: #3D4D45">Se não for o que você esperava, peça o reembolso em até 7 dias e devolvemos 100% do valor. Sem perguntas.</div></div>
-</div>
-</div>
+<section class="pricing" id="precos" aria-labelledby="precos-t">
+  <div class="wrap">
+    <div class="pricing-head">
+      <h2 id="precos-t">Escolha como começar</h2>
+      <p>Pagamento único, sem mensalidade. Você recebe o material na hora.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Guia</h3>
+        <p class="for">Para entender o seu caminho e planejar</p>
+        <p class="price"><small>R$</small>87</p>
+        <p class="price-note">pagamento único</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>E-book com 14 capítulos (PDF)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Edição 2027, com as leis de 2025 e 2026</li>
+          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>7 bônus</li>
+          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Atualizações por 12 meses</li>
+        </ul>
+        <a class="btn btn-ghost" style="color:var(--ink)" href="https://buy.stripe.com/cNieVd0ouart4dJ5Rsew806">Comprar o Guia</a>
+      </div>
+      <div class="plan best">
+        <span class="ribbon">Recomendado</span>
+        <h3>Kit completo</h3>
+        <p class="for">Para planejar e executar sem perder tempo</p>
+        <p class="price"><small>R$</small>137</p>
+        <p class="price-note">pagamento único</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>E-book com 14 capítulos (PDF)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Planilha do orçamento (Excel)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Modelos de CV e cartas (Word)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Checklists, italiano de sobrevivência, sites oficiais, calendário de 90 dias e rede brasileira</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Atualizações gratuitas por 12 meses</li>
+        </ul>
+        <a class="btn btn-cta" href="https://buy.stripe.com/6oU00j8V06bd11xenYew807">Comprar o Kit completo</a>
+      </div>
+    </div>
+    <div class="guarantee">
+      <div class="seal" aria-hidden="true">7</div>
+      <div><b>Garantia de 7 dias</b><span>Se não for o que você esperava, peça o reembolso em até 7 dias e devolvemos 100% do valor.</span></div>
+    </div>
+    <div class="pay"><span>Pagamento seguro pela Stripe</span><span>Pix com liberação imediata</span><span>Cartão de crédito parcelado</span></div>
+  </div>
 </section>
 
-<!-- FAQ -->
-<section style="background: #F3F6F4">
-<div style="max-width: 820px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; display: flex; flex-direction: column; gap: 28px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.02em">Perguntas frequentes</h2>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">O guia ajuda com o processo de cidadania?</summary><p style="margin: 12px 0 0; color: #3D4D45">O guia explica as regras atuais de forma geral, mas o foco são os caminhos legais para quem não tem cidadania. Para processos de cidadania, o ideal é falar com um advogado especializado.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">Preciso falar italiano?</summary><p style="margin: 12px 0 0; color: #3D4D45">Não para ler o guia: ele é todo em português do Brasil. Para viver na Itália, o italiano ajuda muito, e por isso o kit traz um bônus com as frases essenciais do dia a dia.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">As informações estão atualizadas?</summary><p style="margin: 12px 0 0; color: #3D4D45">Sim. Cada capítulo traz a data da última revisão e as fontes oficiais. No kit completo, você recebe as atualizações por 12 meses quando as regras mudarem.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">Como recebo o material?</summary><p style="margin: 12px 0 0; color: #3D4D45">Logo após o pagamento, você recebe por e-mail o link para baixar o e-book e os bônus. Com Pix, a liberação é imediata.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">Posso parcelar?</summary><p style="margin: 12px 0 0; color: #3D4D45">Sim, no cartão de crédito. Também aceitamos Pix à vista.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">E se eu não gostar?</summary><p style="margin: 12px 0 0; color: #3D4D45">Você tem 7 dias para pedir o reembolso integral. Basta responder ao e-mail de compra.</p></details>
-<details style="background: #FFFFFF; border-radius: 14px; padding: 18px 22px"><summary style="font-weight: 700; font-size: 18px">O pagamento é seguro?</summary><p style="margin: 12px 0 0; color: #3D4D45">Sim. O pagamento é processado pela Stripe, uma das maiores plataformas de pagamento do mundo. Nós não temos acesso aos dados do seu cartão.</p></details>
-</div>
-</div>
+<section class="faq" aria-labelledby="faq-t">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <h2 id="faq-t">Perguntas frequentes</h2>
+      <p>Ficou alguma dúvida? Escreva para <a href="mailto:dsf4bio@gmail.com">dsf4bio@gmail.com</a>.</p>
+    </div>
+    <div>
+      <details><summary>O guia ajuda com o processo de cidadania?</summary><p>Ele explica as regras atuais e quem ainda tem direito, mas o foco são os caminhos legais para quem não tem cidadania. Para um processo de cidadania, o ideal é um advogado especializado.</p></details>
+      <details><summary>Preciso falar italiano?</summary><p>Não para ler o guia: ele é todo em português do Brasil. Para viver na Itália, o italiano ajuda muito, e por isso o Kit traz as frases essenciais do dia a dia.</p></details>
+      <details><summary>As informações estão atualizadas?</summary><p>Sim. O guia considera a lei da cidadania de 2025, a decisão da Corte Constitucional de 2026 e os valores de 2026/2027, com a fonte oficial de cada regra. No Kit completo, você recebe as atualizações por 12 meses.</p></details>
+      <details><summary>Como recebo o material?</summary><p>Logo depois do pagamento aparece o link para baixar. Com Pix, a liberação é imediata.</p></details>
+      <details><summary>Qual a diferença entre o Guia e o Kit completo?</summary><p>O Guia é o e-book. O Kit completo inclui o e-book, a planilha do orçamento, os modelos de CV e cartas, mais cinco materiais práticos e as atualizações por 12 meses.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias para pedir o reembolso integral. Basta escrever para dsf4bio@gmail.com.</p></details>
+      <details><summary>O pagamento é seguro?</summary><p>Sim. O pagamento é processado pela Stripe, uma das maiores plataformas de pagamento do mundo. Nós não temos acesso aos dados do seu cartão.</p></details>
+    </div>
+  </div>
 </section>
 
-<!-- CTA FINAL -->
-<section style="background: #0E2A20; color: #FFFFFF">
-<div style="max-width: 820px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 50px); line-height: 1.08; letter-spacing: -0.02em">A cidadania ficou mais difícil. O seu plano não precisa ficar.</h2>
-<p style="margin: 0; font-size: 19px; color: #C9DAD1">Comece hoje com um mapa claro, atualizado e em português do Brasil.</p>
-<a href="#precos" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 30px; border-radius: 999px; background: #C2410C; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none">Quero meu plano para a Itália</a>
-</div>
+<section class="final" aria-labelledby="final-t">
+  <div class="wrap">
+    <div class="route-mini" aria-hidden="true">BR<i></i>IT</div>
+    <h2 id="final-t">Você não precisa de atalho. Precisa de um plano.</h2>
+    <p>Comece hoje com um mapa claro, atualizado e escrito para brasileiros.</p>
+    <a class="btn btn-cta" href="#precos">Quero o meu plano para a Itália</a>
+  </div>
 </section>
+</main>
 
-<!-- RODAPÉ -->
-<footer style="border-top: 1px solid #E3E9E5">
-<div style="max-width: 1120px; margin: 0 auto; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #4A5A52">
-<p style="margin: 0">Este material é informativo e não substitui assessoria jurídica. Não temos vínculo com o governo italiano nem com consulados. Regras de imigração podem mudar: confira sempre os sites oficiais.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px 20px"><span>© 2026 Fabio Dos Santos</span><a href="mailto:dsf4bio@gmail.com">Contato: dsf4bio@gmail.com</a></div>
-</div>
+<footer>
+  <div class="wrap">
+    <p>Este material é informativo e não substitui assessoria jurídica. Não temos vínculo com o governo italiano nem com consulados. As regras de imigração mudam: confira sempre os sites oficiais.</p>
+    <p>© <span id="y">2026</span> Fabio Dos Santos · DS service<br><a href="mailto:dsf4bio@gmail.com">dsf4bio@gmail.com</a></p>
+  </div>
 </footer>
 
+<div class="buybar" id="buybar" role="region" aria-label="Comprar">
+  <div><b>Kit completo · R$137</b><span>Pix ou cartão · garantia de 7 dias</span></div>
+  <a class="btn btn-cta" href="#precos">Comprar</a>
 </div>
+
+<script>
+(function(){
+  var y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+
+  // 3D book follows pointer
+  var stage=document.getElementById('stage'), book=document.getElementById('book');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(stage && book && !reduce){
+    var base='translate(-50%,-50%) ';
+    function tilt(x,y){ book.style.transform=base+'rotateY('+(-18+x*22)+'deg) rotateX('+(6-y*14)+'deg)'; }
+    window.addEventListener('pointermove',function(e){
+      var r=stage.getBoundingClientRect(); if(r.bottom<0) return;
+      tilt((e.clientX-r.left)/r.width-.5,(e.clientY-r.top)/r.height-.5);
+    },{passive:true});
+    window.addEventListener('deviceorientation',function(e){ if(e.gamma==null) return; tilt(Math.max(-.5,Math.min(.5,e.gamma/60)),Math.max(-.5,Math.min(.5,(e.beta-45)/60))); },{passive:true});
+  }
+
+  // path finder
+  var Q=[
+    {t:'Seu pai, mãe, avô ou avó tem (ou tinha) apenas a cidadania italiana?',h:'Sem nunca ter tido outra nacionalidade.'},
+    {t:'Você já trabalha remoto e ganha cerca de €28.000 por ano ou mais?',h:'Para empresas ou clientes de fora da Itália.'},
+    {t:'Você tem diploma superior e trabalha em TI, engenharia, saúde ou finanças?',h:''},
+    {t:'Você quer estudar numa universidade italiana?',h:'Graduação ou mestrado. É o caminho mais comum para quem é jovem.'}
+  ];
+  var R={
+    cid:{t:'Cidadania por descendência',d:'Você pode estar entre as exceções da nova lei. Fale com um advogado especializado e, enquanto isso, tenha um plano B.',r:'Pai, mãe ou avós só italianos',c:'Capítulo 1 e os planos B'},
+    nom:{t:'Visto de nômade digital',d:'Você pode morar na Itália mantendo o seu trabalho remoto, sem entrar nas cotas anuais.',r:'Renda de cerca de €28.000 por ano',c:'Capítulos 2, 5 e 7'},
+    blu:{t:'Carta Azul UE',d:'Para profissionais qualificados com proposta de emprego. Fica fora das cotas e permite trazer a família.',r:'Salário de cerca de €36.300 por ano',c:'Capítulos 2 e 9'},
+    est:{t:'Estudo com bolsa regional',d:'Você entra legalmente, pode trabalhar meio período e, depois do diploma, converter o visto em trabalho.',r:'€10.179,85 por ano de recursos',c:'Capítulos 4 e 5'},
+    flu:{t:'Trabalho pelo decreto flussi',d:'Uma empresa italiana pede o seu visto nas datas de cota. O desafio é encontrar essa empresa, e o guia mostra como.',r:'Oferta de uma empresa italiana',c:'Capítulos 2, 5 e 9'}
+  };
+  var map=['cid','nom','blu','est'], step=0, hist=[];
+  var qcard=document.getElementById('qcard'), pass=document.getElementById('pass'), prog=document.querySelectorAll('#progress i');
+  function render(){
+    document.getElementById('qstep').textContent='Pergunta '+(step+1)+' de '+Q.length;
+    document.getElementById('qtext').textContent=Q[step].t;
+    var h=document.getElementById('qhint'); h.textContent=Q[step].h; h.hidden=!Q[step].h;
+    document.getElementById('qback').hidden=step===0;
+    prog.forEach(function(p,i){p.classList.toggle('on',i<step)});
+    qcard.classList.remove('q-anim'); void qcard.offsetWidth; qcard.classList.add('q-anim');
+  }
+  function show(k){
+    var r=R[k];
+    document.getElementById('ptitle').textContent=r.t; document.getElementById('pdesc').textContent=r.d;
+    document.getElementById('preq').textContent=r.r; document.getElementById('pchap').textContent=r.c;
+    prog.forEach(function(p){p.classList.add('on')});
+    qcard.hidden=true; pass.classList.add('show'); pass.setAttribute('tabindex','-1'); pass.focus({preventScroll:true});
+  }
+  qcard.querySelectorAll('[data-a]').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.dataset.a==='sim'){ show(map[step]); return; }
+      hist.push(step); step++;
+      if(step>=Q.length){ show('flu'); } else render();
+    });
+  });
+  document.getElementById('qback').addEventListener('click',function(){ if(hist.length){ step=hist.pop(); render(); } });
+  document.getElementById('qrestart').addEventListener('click',function(){ step=0; hist=[]; pass.classList.remove('show'); qcard.hidden=false; render(); });
+  render();
+
+  // gallery arrows
+  var rail=document.getElementById('rail');
+  function slide(d){ rail.scrollBy({left:d*rail.clientWidth*.8,behavior:reduce?'auto':'smooth'}); }
+  document.getElementById('prev').addEventListener('click',function(){slide(-1)});
+  document.getElementById('next').addEventListener('click',function(){slide(1)});
+
+  // sticky buy bar on mobile (hidden over hero and pricing)
+  var bar=document.getElementById('buybar'), hero=document.querySelector('.hero'), pricing=document.getElementById('precos');
+  if('IntersectionObserver' in window){
+    var seen={hero:true,pricing:false};
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ seen[e.target===hero?'hero':'pricing']=e.isIntersecting; });
+      bar.classList.toggle('show',!seen.hero && !seen.pricing);
+    },{threshold:0});
+    io.observe(hero); io.observe(pricing);
+  }
+})();
+</script>
 </body>
 </html>
