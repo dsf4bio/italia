@@ -25,6 +25,8 @@ I pulsanti di acquisto portano ai Payment Link di Stripe:
 Apri `index.html` nel browser, oppure in VS Code usa l'estensione **Live Server**.
 
 ## Pubblicarla online
-Con **GitHub Pages**: Settings → Pages → Branch `main`, cartella `/ (root)` → Save. Dopo qualche minuto la pagina è online su `https://dsf4bio.github.io/italia/`.
+Con **GitHub Pages**: Settings → Pages → Branch `main`, cartella `/ (root)` → Save. Dopo qualche minuto la pagina è online.
+
+Sito pubblicato: https://italia-bay.vercel.app/ (Vercel, aggiornato a ogni push su `main`).
 
 Contatto: dsf4bio@gmail.com

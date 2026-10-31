@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dsf4bio.github.io/italia/sitemap.xml
+Sitemap: https://italia-bay.vercel.app/sitemap.xml
