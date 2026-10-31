@@ -221,6 +221,26 @@ section{scroll-margin-top:72px}
 .pay{display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--muted)}
 @media (max-width:760px){.plans{grid-template-columns:1fr}.plan.best{order:-1}}
 
+
+.plan-img{border-radius:18px;overflow:hidden;background:var(--mint);margin:-10px -10px 22px;aspect-ratio:1/1}
+.plan-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.plan:hover .plan-img img{transform:scale(1.03)}
+.plan.best .plan-img{background:#E8F0EB}
+.btn svg{width:18px;height:18px;flex:none}
+.lock-note{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;color:var(--muted);margin-top:12px}
+.plan.best .lock-note{color:#B9D0C4}
+.lock-note svg{width:14px;height:14px}
+.secure{max-width:720px;margin:20px auto 0;background:#fff;border-radius:var(--r-m);padding:22px 24px;border:1.5px solid var(--line)}
+.secure-head{display:flex;align-items:center;gap:10px;color:var(--green)}
+.secure-head svg{width:24px;height:24px}
+.secure-head b{font-size:17px;color:var(--ink)}
+.secure>p{color:var(--muted);font-size:15.5px;margin-top:8px}
+.methods{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.methods span{font:700 14px var(--body);padding:8px 14px;border-radius:10px;border:1.5px solid var(--line);color:var(--ink)}
+.methods .m-pix{background:#E6F7F3;border-color:#9FD8CB;color:#0B6E5C}
+.secure-note{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--ink);margin-top:14px;font-weight:600}
+.secure-note svg{width:18px;height:18px;color:var(--green);flex:none}
+
 /* faq */
 .faq{padding:90px 0}
 .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
@@ -285,7 +305,7 @@ footer a{color:#fff}
         <a class="btn btn-ghost" href="#caminho">Descobrir meu caminho</a>
       </div>
       <div class="trust">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Pix ou cartão parcelado</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Pix, cartão, Google Pay e Apple Pay</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Download na hora</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>7 dias de garantia</span>
       </div>
@@ -441,24 +461,27 @@ footer a{color:#fff}
     </div>
     <div class="plans">
       <div class="plan">
+        <div class="plan-img"><img src="img/guia.jpg" alt="Capa do e-book Itália Sem Cidadania" loading="lazy" width="900" height="900"></div>
         <h3>Guia</h3>
         <p class="for">Para entender o seu caminho e planejar</p>
         <p class="price"><small>R$</small>87</p>
-        <p class="price-note">pagamento único</p>
+        <p class="price-note">pagamento único, acesso para sempre</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>E-book com 14 capítulos (PDF)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Edição 2027, com as leis de 2025 e 2026</li>
           <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>7 bônus</li>
           <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Atualizações por 12 meses</li>
         </ul>
-        <a class="btn btn-ghost" style="color:var(--ink)" href="https://buy.stripe.com/cNieVd0ouart4dJ5Rsew806">Comprar o Guia</a>
+        <a class="btn btn-ghost" style="color:var(--ink)" href="https://buy.stripe.com/cNieVd0ouart4dJ5Rsew806"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Comprar o Guia</a>
+        <p class="lock-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento seguro via Stripe</p>
       </div>
       <div class="plan best">
         <span class="ribbon">Recomendado</span>
+        <div class="plan-img"><img src="img/kit.jpg" alt="O e-book, o Kit de Bônus, a planilha e os modelos de documentos" loading="lazy" width="900" height="900"></div>
         <h3>Kit completo</h3>
         <p class="for">Para planejar e executar sem perder tempo</p>
         <p class="price"><small>R$</small>137</p>
-        <p class="price-note">pagamento único</p>
+        <p class="price-note">pagamento único, acesso para sempre</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>E-book com 14 capítulos (PDF)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Planilha do orçamento (Excel)</li>
@@ -466,14 +489,22 @@ footer a{color:#fff}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Checklists, italiano de sobrevivência, sites oficiais, calendário de 90 dias e rede brasileira</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Atualizações gratuitas por 12 meses</li>
         </ul>
-        <a class="btn btn-cta" href="https://buy.stripe.com/6oU00j8V06bd11xenYew807">Comprar o Kit completo</a>
+        <a class="btn btn-cta" href="https://buy.stripe.com/6oU00j8V06bd11xenYew807"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Comprar o Kit completo</a>
+        <p class="lock-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento seguro via Stripe</p>
       </div>
     </div>
     <div class="guarantee">
       <div class="seal" aria-hidden="true">7</div>
       <div><b>Garantia de 7 dias</b><span>Se não for o que você esperava, peça o reembolso em até 7 dias e devolvemos 100% do valor.</span></div>
     </div>
-    <div class="pay"><span>Pagamento seguro pela Stripe</span><span>Pix com liberação imediata</span><span>Cartão de crédito parcelado</span></div>
+    <div class="secure">
+      <div class="secure-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><b>Pagamento 100% seguro</b></div>
+      <p>Você paga na página protegida da Stripe, com conexão criptografada. Nós nunca vemos os dados do seu cartão.</p>
+      <div class="methods" aria-label="Formas de pagamento">
+        <span class="m-pix">Pix</span><span>Cartão de crédito</span><span>Cartão de débito</span><span>Google Pay</span><span>Apple Pay</span>
+      </div>
+      <p class="secure-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Pagamento único: sem mensalidade e sem cobranças futuras.</p>
+    </div>
   </div>
 </section>
 
@@ -490,7 +521,8 @@ footer a{color:#fff}
       <details><summary>Como recebo o material?</summary><p>Logo depois do pagamento aparece o link para baixar. Com Pix, a liberação é imediata.</p></details>
       <details><summary>Qual a diferença entre o Guia e o Kit completo?</summary><p>O Guia é o e-book. O Kit completo inclui o e-book, a planilha do orçamento, os modelos de CV e cartas, mais cinco materiais práticos e as atualizações por 12 meses.</p></details>
       <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias para pedir o reembolso integral. Basta escrever para dsf4bio@gmail.com.</p></details>
-      <details><summary>O pagamento é seguro?</summary><p>Sim. O pagamento é processado pela Stripe, uma das maiores plataformas de pagamento do mundo. Nós não temos acesso aos dados do seu cartão.</p></details>
+      <details><summary>O pagamento é seguro?</summary><p>Sim. O pagamento é processado pela Stripe, uma das maiores plataformas de pagamento do mundo, numa página protegida e criptografada. Nós não temos acesso aos dados do seu cartão.</p></details>
+      <details><summary>Quais formas de pagamento são aceitas?</summary><p>Pix, cartão de crédito ou débito, Google Pay e Apple Pay. O pagamento é único, sem mensalidade.</p></details>
     </div>
   </div>
 </section>
@@ -513,7 +545,7 @@ footer a{color:#fff}
 </footer>
 
 <div class="buybar" id="buybar" role="region" aria-label="Comprar">
-  <div><b>Kit completo · R$137</b><span>Pix ou cartão · garantia de 7 dias</span></div>
+  <div><b>Kit completo · R$137</b><span>Pagamento seguro · garantia de 7 dias</span></div>
   <a class="btn btn-cta" href="#precos">Comprar</a>
 </div>
 
